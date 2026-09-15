@@ -279,7 +279,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -14 }}
             transition={{ duration: 0.5 }}
-            className="trip-page relative flex min-h-0 items-start justify-center overflow-visible px-4 py-24 pb-28 sm:min-h-screen sm:items-center sm:px-6 sm:py-20"
+            className="trip-page relative flex min-h-0 min-w-0 items-start justify-center overflow-visible px-4 py-24 pb-28 sm:min-h-screen sm:items-center sm:px-6 sm:py-20"
           >
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -293,7 +293,7 @@ function App() {
             />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,206,184,0.12),transparent_28%),linear-gradient(180deg,#120f15,#17141a_45%,#110d12)]" />
 
-            <div className="trip-page-content relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center justify-start sm:justify-center">
+            <div className="trip-page-content relative z-10 mx-auto flex w-full min-w-0 max-w-7xl flex-col items-center justify-start sm:justify-center">
               <div className="mb-8 w-full text-center">
                 <p className="text-xs uppercase tracking-[0.45em] text-[#f2b0a9] sm:text-sm">Our future trip</p>
                 <h2 className="mt-4 text-[clamp(2.2rem,4vw,4.4rem)] font-semibold leading-tight text-white">
@@ -311,9 +311,9 @@ function App() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.08, duration: 0.45 }}
                       whileHover={{ y: -8 }}
-                      className="group mx-auto w-full max-w-[260px] overflow-hidden rounded-[30px] border border-white/12 bg-white/5 shadow-[0_25px_80px_rgba(0,0,0,0.28)] backdrop-blur-md"
+                      className="trip-card group mx-auto w-full min-w-0 max-w-[260px] overflow-hidden rounded-[30px] border border-white/12 bg-white/5 shadow-[0_25px_80px_rgba(0,0,0,0.28)] backdrop-blur-md"
                     >
-                      <div className="relative h-72 overflow-hidden sm:h-80 xl:h-[22rem]">
+                      <div className="relative aspect-[4/3] overflow-hidden sm:aspect-auto sm:h-80 xl:h-[22rem]">
                         <img
                           src={moment.image}
                           alt={moment.title}

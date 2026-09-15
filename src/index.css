@@ -11,6 +11,8 @@
 
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -45,16 +47,27 @@ a {
   .trip-page {
     display: block;
     min-height: 0;
+    min-width: 0;
     overflow: visible;
+    overscroll-behavior-x: none;
+    touch-action: pan-y;
   }
 
   .trip-page-content {
     display: flex;
     min-height: 0;
+    min-width: 0;
   }
 
   .trip-grid {
     grid-template-columns: minmax(0, 1fr);
+    min-width: 0;
+    width: 100%;
+  }
+
+  .trip-card {
+    min-width: 0;
+    width: min(100%, 20rem);
   }
 
   .trip-actions {
