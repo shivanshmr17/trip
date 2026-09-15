@@ -40,3 +40,24 @@ button,
 a {
   -webkit-tap-highlight-color: transparent;
 }
+
+@media (max-width: 639px) {
+  .trip-page {
+    display: block;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .trip-page-content {
+    display: flex;
+    min-height: 0;
+  }
+
+  .trip-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .trip-actions {
+    padding-bottom: 1rem;
+  }
+}

@@ -124,8 +124,8 @@ function App() {
         }
       `}</style>
 
-      <div className="fixed left-1/2 top-4 z-50 -translate-x-1/2 rounded-full border border-white/15 bg-black/20 px-3 py-1.5 backdrop-blur-md sm:top-6">
-        <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-stone-200/80">
+      <div className="fixed left-1/2 top-4 z-50 w-[calc(100%-1rem)] max-w-max -translate-x-1/2 overflow-x-auto rounded-full border border-white/15 bg-black/20 px-3 py-1.5 backdrop-blur-md sm:top-6">
+        <div className="flex w-max items-center gap-1 text-[9px] uppercase tracking-[0.2em] text-stone-200/80 sm:gap-2 sm:text-[10px] sm:tracking-[0.3em]">
           {pageNames.map((name, index) => (
             <button
               key={name}
@@ -279,7 +279,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -14 }}
             transition={{ duration: 0.5 }}
-            className="relative flex min-h-[100dvh] items-start justify-center overflow-y-auto px-4 py-24 pb-28 sm:items-center sm:px-6 sm:py-20"
+            className="trip-page relative flex min-h-0 items-start justify-center overflow-visible px-4 py-24 pb-28 sm:min-h-screen sm:items-center sm:px-6 sm:py-20"
           >
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -293,7 +293,7 @@ function App() {
             />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,206,184,0.12),transparent_28%),linear-gradient(180deg,#120f15,#17141a_45%,#110d12)]" />
 
-            <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center justify-start sm:justify-center">
+            <div className="trip-page-content relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center justify-start sm:justify-center">
               <div className="mb-8 w-full text-center">
                 <p className="text-xs uppercase tracking-[0.45em] text-[#f2b0a9] sm:text-sm">Our future trip</p>
                 <h2 className="mt-4 text-[clamp(2.2rem,4vw,4.4rem)] font-semibold leading-tight text-white">
@@ -301,7 +301,7 @@ function App() {
                 </h2>
               </div>
 
-              <div className="grid w-full grid-cols-1 justify-items-center gap-5 sm:grid-cols-2 xl:grid-cols-5">
+              <div className="trip-grid grid w-full grid-cols-1 justify-items-center gap-5 sm:grid-cols-2 xl:grid-cols-5">
                 {travelMoments.map((moment, index) => {
                   const Icon = moment.icon
                   return (
@@ -335,7 +335,7 @@ function App() {
                 })}
               </div>
 
-              <div className="mt-10 flex items-center justify-center gap-4">
+              <div className="trip-actions mt-10 flex items-center justify-center gap-4">
                 <button
                   type="button"
                   onClick={prevPage}
