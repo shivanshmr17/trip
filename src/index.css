@@ -18,6 +18,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
+  overflow-y: auto;
   background:
     radial-gradient(circle at top, rgba(180, 122, 107, 0.18), transparent 35%),
     linear-gradient(180deg, #120f15 0%, #1c1719 100%);

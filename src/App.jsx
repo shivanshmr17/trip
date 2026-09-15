@@ -279,7 +279,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -14 }}
             transition={{ duration: 0.5 }}
-            className="relative flex min-h-screen items-center justify-center px-4 py-14 sm:px-6 sm:py-20"
+            className="relative flex min-h-[100dvh] items-start justify-center overflow-y-auto px-4 py-24 pb-28 sm:items-center sm:px-6 sm:py-20"
           >
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -293,15 +293,15 @@ function App() {
             />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,206,184,0.12),transparent_28%),linear-gradient(180deg,#120f15,#17141a_45%,#110d12)]" />
 
-            <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center justify-center">
-              <div className="mb-8 text-center">
+            <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center justify-start sm:justify-center">
+              <div className="mb-8 w-full text-center">
                 <p className="text-xs uppercase tracking-[0.45em] text-[#f2b0a9] sm:text-sm">Our future trip</p>
                 <h2 className="mt-4 text-[clamp(2.2rem,4vw,4.4rem)] font-semibold leading-tight text-white">
                   Our Darjeeling trip
                 </h2>
               </div>
 
-              <div className="grid justify-center gap-5 sm:grid-cols-2 xl:grid-cols-5">
+              <div className="grid w-full grid-cols-1 justify-items-center gap-5 sm:grid-cols-2 xl:grid-cols-5">
                 {travelMoments.map((moment, index) => {
                   const Icon = moment.icon
                   return (
